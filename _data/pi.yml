@@ -2,6 +2,10 @@
 
 - name: Dominik Slomma
   photo: profilPic.jpg
+  photo_resized: profilPic-800.jpg
+  photo_webp: profilPic-800.webp
+  photo_width: 800
+  photo_height: 747
   info: PhD Student at University of Technology Sydney (UTS)
   email: dominik.slomma@student.uts.edu.au
   github: https://github.com/DominikSlomma

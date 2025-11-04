@@ -3,9 +3,10 @@ title: "Teaching"
 layout: textlay
 permalink: /teaching/
 sitemap: true
+description: "Dominik Slomma mentors UTS students in Sensors and Control as well as AI for Robotics, bridging theory with hands-on perception and control labs."
+image: /images/profilPic-800.jpg
 ---
-
-## Teaching Experience
+# Teaching Experience
 
 I enjoy working with students at the University of Technology Sydney on practical robotics topics that bridge perception, control, and AI.
 

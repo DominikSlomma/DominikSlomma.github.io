@@ -1,10 +1,14 @@
 # Site settings
 title: Dominik Slomma
 email: dominik.slomma@student.uts.edu.au
-description: Academic webpage of Dominik Slomma
+description: "Dominik Slomma is a robotics PhD student at UTS researching visual SLAM, surgical robotics, and perception-driven autonomy."
 baseurl: ""
-url: "https://DominikSlomma.github.io"
+url: "https://dominikslomma.github.io"
 lang: en
+timezone: Australia/Sydney
+
+sass:
+  style: compressed
 
 # Google analytics ID: Uncomment and your own, if you like
 # google_analytics: XX
@@ -62,7 +66,8 @@ kramdown:
   enable_coderay: false
   parse_block_html: true # default for kramdown is false. This will enable using Markdown links
 
-plugins: ["jekyll/scholar"]
+plugins:
+  - jekyll/scholar
 
 scholar:
   last_name: Doe
@@ -88,6 +93,14 @@ scholar:
 
   bibliography_list_attributes:
     reversed: "reversed"
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      image: /images/profilPic-800.jpg
+      sitemap: true
 
 exclude:
   - Gemfile

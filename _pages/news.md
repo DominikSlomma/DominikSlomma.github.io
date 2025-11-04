@@ -2,10 +2,11 @@
 title: "News"
 layout: textlay
 permalink: /news/
-sitemap: false
+description: "Latest updates on Dominik Slomma's robotics research, publications, and conference activities."
+image: /images/profilPic-800.jpg
 ---
 
-## Updates
+# News & Updates
 
 Stay up to date with project announcements, publications, and milestones in robotics and visual SLAM.
 

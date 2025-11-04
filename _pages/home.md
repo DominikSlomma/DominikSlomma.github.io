@@ -1,11 +1,12 @@
 ---
 title: "Home"
 layout: homelay
-sitemap: false
 permalink: /
+description: "Robotics PhD student Dominik Slomma researches visual SLAM, surgical robotics, and perception-driven autonomy at the University of Technology Sydney."
+image: /images/profilPic-800.jpg
 ---
-### Dominik Slomma
-###### PhD Student, Robotics Institute, Computer Scientist
+# Dominik Slomma
+## PhD Student, Robotics Institute, Computer Scientist
 <p style="font-size: 20px; text-align: center;">  Designing robots that observe and understand their surroundings  </p>
 
 <p style="text-align: justify;">

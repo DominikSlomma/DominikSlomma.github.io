@@ -7,7 +7,7 @@
   {% assign meta_description = raw_description | strip_html | strip_newlines | replace: '\n', ' ' | replace: '  ', ' ' | strip | truncate: 160 %}
   {% assign meta_title = page.title | default: site.title %}
   {% assign canonical_url = page.url | replace:'index.html','' | absolute_url %}
-  {% assign default_image = page.image | default: '/images/profilPic.jpg' %}
+  {% assign default_image = page.image | default: '/images/profilPic-800.jpg' %}
   {% assign meta_image = default_image | relative_url | absolute_url %}
   {% if page.layout == 'post' %}
     {% assign og_type = 'article' %}
@@ -39,19 +39,17 @@
   <link rel="canonical" href="{{ canonical_url }}">
   <link rel="shortcut icon" type ="image/x-icon" href="{{ site.url }}{{ site.baseurl }}/favicon.ico">
   <link rel="icon" type="image/svg+xml" href="{{ site.url }}{{ site.baseurl }}/images/robot-icon.svg">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
-
-  <link rel="preconnect" href="https://player.vimeo.com">
-  <link rel="preconnect" href="https://i.vimeocdn.com">
-  <link rel="preconnect" href="https://f.vimeocdn.com">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css">
 
 
 {% if jekyll.environment == 'production' %}
 {% include analytics.html %}
 {% endif %}
 
+{% if page.math %}
 {% include mathjax.html %}
+{% endif %}
 
 {% assign profile = site.data.pi | first %}
 {% if profile %}
@@ -92,5 +90,19 @@
 }
 </script>
 {% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.title | escape }}",
+  "url": "{{ site.url }}{{ site.baseurl }}/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.google.com/search?q={search_term_string}+site:dominikslomma.github.io",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
 
 </head>
