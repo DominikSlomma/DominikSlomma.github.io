@@ -1,17 +1,21 @@
-- name: Dr. Richard Feynman
-  photo: headshot.jpg
-  info: Richard C. Tolman Professor, California Institute of Technology
-  email: richard@university.edu
-  github: https://github.com/
-  researchgate: https://www.researchgate.net/
-  scholar: https://scholar.google.com/citations?user=B7vSqZsAAAAJ
+
+
+- name: Dominik Slomma
+  photo: profilPic.jpg
+  info: PhD Student at University of Technology Sydney (UTS)
+  email: dominik.slomma@student.uts.edu.au
+  github: https://github.com/DominikSlomma
+  orcid: https://orcid.org/0000-0002-1825-0097
+  researchgate: https://ieeexplore.ieee.org/author/37088806657
+  scholar: https://scholar.google.com/citations?user=Qz_h7NsAAAAJ&hl=de
   cv: cv/cv.pdf
   # Change the items in "education" you have (up to 6)
   education:
     [
-      "(1942) Ph.D. Physics, Princeton University",
-      "(1939) B.S. Physics, Massachusetts Institute of Technology",
+      "(2017) B.S. Westphalian University",
+      "(2022) M.S. Westphalian University",
     ]
 
   educationshort:
-    ["(1942) Ph.D. Physics, Princeton", "(1939) B.S. Physics, MIT"]
+    ["(2017) B.S. Westphalian University",
+      "(2022) M.S. Westphalian University"]

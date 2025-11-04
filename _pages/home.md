@@ -4,32 +4,26 @@ layout: homelay
 sitemap: false
 permalink: /
 ---
+### Dominik Slomma
+###### PhD Student, Robotics Institute, Computer Scientist
+<p style="font-size: 20px; text-align: center;">  Designing robots that observe and understand their surroundings  </p>
 
-### Welcome!
+<p style="text-align: justify;">
+My name is Dominik Slomma and I am currently pursuing a PhD in Robotics at the University of Technology Sydney. My research focuses on visual SLAM systems for surgical robotics, particularly in the context of minimally invasive procedures. I concentrate on developing real-time systems that make efficient use of both GPU and CPU resources while delivering precise and reliable results.
+</p>
+<p style="text-align: justify;">
+In addition to my work in surgical robotics, I have a strong interest in rescue robotics, especially the use of drones to generate camera-based situational awareness systems that support emergency responders. From 2019 to 2023, I was actively involved in research at the German Rescue Robotics Center (DRZ), where I contributed to several interdisciplinary projects.
+</p>
+<p style="text-align: justify;">
+During my Master thesis, in collaboration with the DRZ, I explored AI-based depth estimation using 360-degree panoramic imagery, a method with broad potential for applications in safety-critical environments.
+</p>
+<p style="text-align: justify;">
+My interests lie at the intersection of robotics, computer vision, real-time systems, and high-performance computing, with the goal of developing intelligent systems for both medical and emergency applications.
+</p>
 
-asdasdasdas 
+## Latest News
+{% include news-list.html limit=3 show_read_more=true %}
 
-
-Theoretical physics is a branch of physics that focuses on the development of mathematical models and theories to understand and explain natural phenomena.
-It plays a crucial role in our understanding of the fundamental laws of the universe and the fundamental particles that make up all matter.
-Research in theoretical physics helps us to make predictions about how the universe works and to test these predictions through experiments.
-It also helps us to understand the fundamental principles that govern the behavior of matter and energy, and to explore the limits of our current knowledge.
-Theoretical physics helps us to make progress in a wide range of fields, including cosmology, particle physics, and quantum mechanics, and it has led to many important discoveries and technological innovations.
-
-<div class="container">
-    <div class="row">
-        <center>
-            <img src="{{ site.url }}{{ site.baseurl }}/images/banner.jpg" width="100%"/><br/>
-            Examples of Feynman diagrams. <br/>
-            Feynman R., The theory of positrons. <i>Phys. Rev.</i> (1949)
-        </center>
-    </div>
-</div>
-<br/>
-
-### About me
-
-I am a physicist working in the field of quantum mechanics and quantum electrodynamics.
-I received my undergraduate degree in physics from the Massachusetts Institute of Technology (MIT) in 1939 and went on to earn my PhD from Princeton University in 1942.
-After completing my doctoral studies, I worked on the Manhattan Project, where I helped develop the first atomic bombs.
-After the war, I returned to academia, holding teaching and research positions at Cornell and now at the California Institute of Technology.
+<p style="margin-top: 20px;">
+  <a class="btn btn-outline-primary" href="{{ site.url }}{{ site.baseurl }}/projects/">Explore research projects</a>
+</p>

@@ -1,0 +1,52 @@
+---
+title: "Projects"
+layout: textlay
+permalink: /projects/
+sitemap: true
+---
+
+## Research Projects
+
+<div class="projects-grid" markdown="0">
+<article class="project-card">
+  <h3>Efficient Template-based Reconstruction of Deformable Surfaces</h3>
+  <p>Accelerates deformable-scene reconstruction for surgical robotics by tracking mesh vertices directly in image space, cutting optimisation cost without sacrificing accuracy.</p>
+  <ul class="project-tags">
+    <li>Deformable SLAM</li>
+    <li>Surgical robotics</li>
+    <li>GPU optimisation</li>
+  </ul>
+  <div class="project-links">
+    <a class="btn btn-outline-primary btn-sm" href="https://github.com/DominikSlomma/Efficient-and-Accurate-Template-based-Reconstruction-of-Deformable-Surfaces" target="_blank" rel="noopener">Source code</a>
+    <a class="btn btn-outline-secondary btn-sm" href="{{ site.url }}{{ site.baseurl }}/publications/" rel="noopener">Publication</a>
+  </div>
+</article>
+
+<article class="project-card">
+  <h3>Surgical Visual SLAM Benchmarking</h3>
+  <p>Designs evaluation pipelines for endoscopic SLAM systems with photorealistic simulation, latency profiling, and reproducible scoring across GPU-equipped rigs.</p>
+  <ul class="project-tags">
+    <li>Visual SLAM</li>
+    <li>Simulation</li>
+    <li>Benchmarking</li>
+  </ul>
+  <div class="project-links">
+    <a class="btn btn-outline-primary btn-sm" href="https://github.com/DominikSlomma" target="_blank" rel="noopener">Code coming soon</a>
+    <a class="btn btn-outline-secondary btn-sm" href="mailto:dominik.slomma@student.uts.edu.au" rel="noopener">Collaborate</a>
+  </div>
+</article>
+
+<article class="project-card">
+  <h3>Rescue Robotics Situational Awareness</h3>
+  <p>Builds drone-based perception stacks for the German Rescue Robotics Center, fusing 360° imagery and deep learning to aid first responders in hazardous environments.</p>
+  <ul class="project-tags">
+    <li>Rescue robotics</li>
+    <li>Perception</li>
+    <li>Human-robot teaming</li>
+  </ul>
+  <div class="project-links">
+    <a class="btn btn-outline-primary btn-sm" href="https://doi.org/10.1109/SSRR53300.2021.9597677" target="_blank" rel="noopener">SSRR 2021 paper</a>
+    <a class="btn btn-outline-secondary btn-sm" href="https://doi.org/10.1109/ICARA51699.2021.9376551" target="_blank" rel="noopener">ICARA 2021 paper</a>
+  </div>
+</article>
+</div>

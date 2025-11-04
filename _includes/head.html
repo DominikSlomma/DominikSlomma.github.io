@@ -3,11 +3,42 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  {% assign raw_description = page.description | default: page.excerpt | default: site.description %}
+  {% assign meta_description = raw_description | strip_html | strip_newlines | replace: '\n', ' ' | replace: '  ', ' ' | strip | truncate: 160 %}
+  {% assign meta_title = page.title | default: site.title %}
+  {% assign canonical_url = page.url | replace:'index.html','' | absolute_url %}
+  {% assign default_image = page.image | default: '/images/profilPic.jpg' %}
+  {% assign meta_image = default_image | relative_url | absolute_url %}
+  {% if page.layout == 'post' %}
+    {% assign og_type = 'article' %}
+  {% else %}
+    {% assign og_type = 'website' %}
+  {% endif %}
+
   <title>{% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{{ site.description }}">
+  <meta name="description" content="{{ meta_description }}">
+  <meta name="author" content="{{ site.title }}">
+  <meta name="keywords" content="Dominik Slomma, Robotics, Visual SLAM, Surgical Robotics, Computer Vision, UTS, Research">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="{{ og_type }}">
+  <meta property="og:site_name" content="{{ site.title | escape }}">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="{{ meta_title | escape }}">
+  <meta property="og:description" content="{{ meta_description }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:image" content="{{ meta_image }}">
+  <meta property="og:image:alt" content="{{ site.title | escape }}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ meta_title | escape }}">
+  <meta name="twitter:description" content="{{ meta_description }}">
+  <meta name="twitter:image" content="{{ meta_image }}">
+
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="canonical" href="{{ canonical_url }}">
   <link rel="shortcut icon" type ="image/x-icon" href="{{ site.url }}{{ site.baseurl }}/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="{{ site.url }}{{ site.baseurl }}/images/robot-icon.svg">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
 
@@ -21,5 +52,45 @@
 {% endif %}
 
 {% include mathjax.html %}
+
+{% assign profile = site.data.pi | first %}
+{% if profile %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ profile.name | escape }}",
+  "jobTitle": "{{ profile.info | escape }}",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Technology Sydney"
+  },
+  "image": "{{ meta_image }}",
+  "url": "{{ site.url }}{{ site.baseurl }}/",
+  "email": "mailto:{{ profile.email }}",
+  "sameAs": [{%- assign first_link = true -%}
+    {%- if profile.scholar -%}
+      {%- unless first_link -%}, {% endunless -%}"{{ profile.scholar }}"{%- assign first_link = false -%}
+    {%- endif -%}
+    {%- if profile.orcid -%}
+      {%- unless first_link -%}, {% endunless -%}"{{ profile.orcid }}"{%- assign first_link = false -%}
+    {%- endif -%}
+    {%- if profile.github -%}
+      {%- unless first_link -%}, {% endunless -%}"{{ profile.github }}"{%- assign first_link = false -%}
+    {%- endif -%}
+    {%- if profile.researchgate -%}
+      {%- unless first_link -%}, {% endunless -%}"{{ profile.researchgate }}"{%- assign first_link = false -%}
+    {%- endif -%}
+  ],
+  "knowsAbout": [
+    "Visual SLAM",
+    "Surgical robotics",
+    "Rescue robotics",
+    "Computer vision",
+    "Robotics perception"
+  ]
+}
+</script>
+{% endif %}
 
 </head>

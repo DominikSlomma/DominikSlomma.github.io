@@ -1,9 +1,10 @@
 # Site settings
 title: Dominik Slomma
-email: dominik.slomma@student.uts.edu.edu
+email: dominik.slomma@student.uts.edu.au
 description: Academic webpage of Dominik Slomma
 baseurl: ""
-url: ""
+url: "https://DominikSlomma.github.io"
+lang: en
 
 # Google analytics ID: Uncomment and your own, if you like
 # google_analytics: XX
@@ -13,7 +14,7 @@ url: ""
 # Footer info
 affiliation: >
   Dominik Slomma<br/>
-  PhD Robotics Institut<br/>
+  Robotics Institut<br/>
   University of Technology Sydney
 
 location: >
@@ -27,13 +28,15 @@ contact: >
 
 # Pages shown in navbar
 nav_pages:
-  - name: about
+  - name: news
+  - name: projects
   - name: publications
-  - name: talks
-  - name: research
-  - name: Code
-  - name: team
   - name: teaching
+  # - name: talks
+  # - name: research
+  # - name: Code
+  # - name: team
+  # - name: teaching
   # - name: blogs
 
 include:

@@ -1,6 +1,14 @@
-- date: 1 January, 1941
-  headline: "Example news here"
+- date: 2024-08-15
+  title: Website refresh highlights surgical robotics research
+  summary: Launched the updated personal site with a streamlined publications list, richer news feed, and easier access to current projects in visual SLAM for surgery.
+  link: /
 
-- date: 1 January, 1940
-  headline: "Example news here"
+- date: 2021-10-01
+  title: Deployment of aerial robots reported at SSRR 2021
+  summary: Presented our Berlin industrial-fire mission report at the IEEE Safety, Security, and Rescue Robotics Symposium, showcasing UAV-supported emergency response workflows.
+  link: https://doi.org/10.1109/SSRR53300.2021.9597677
 
+- date: 2021-02-15
+  title: Search-and-rescue UAV architecture featured at ICARA
+  summary: Shared the modular UAV platform for indoor search-and-rescue missions at ICARA 2021, emphasizing guided autonomy to reduce operator workload.
+  link: https://doi.org/10.1109/ICARA51699.2021.9376551

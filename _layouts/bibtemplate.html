@@ -22,6 +22,19 @@ pre{
 }
 </style>
 
+{% assign key_slug = entry.key | slugify: 'ascii' %}
+{% assign bib_target = "bib-" | append: key_slug %}
+{% assign abstract_target = "abs-" | append: key_slug %}
+
+{% capture search_terms %}
+{{ entry.title }} {% if entry.author %}{{ entry.author }}{% endif %} {% if entry.journal %}{{ entry.journal }}{% endif %} {% if entry.booktitle %}{{ entry.booktitle }}{% endif %} {{ entry.year }}
+{% endcapture %}
+<span class="pub-meta"
+      data-year="{{ entry.year }}"
+      data-title="{{ entry.title | strip | escape_once }}"
+      data-type="{{ entry.type }}"
+      data-search="{{ search_terms | strip_newlines | strip | downcase | replace:'\"','&quot;' | escape_once }}"
+      hidden></span>
 
 <div class="text-justify">{{reference}}</div>
 
@@ -51,42 +64,34 @@ pre{
 {% endif %}
 
 {% if entry.type == 'unpublished' or entry.type == 'article' or  entry.type == 'thesis' or entry.type == 'inproceedings' or entry.type == 'report' %}
-<button class="btn btn-danger btm-sm"  onclick="toggleBibtex{{entry.key}}()">BIB</button>
+<button class="btn btn-danger btm-sm" onclick="toggleReferenceSection('{{ bib_target }}')">BIB</button>
 {% endif %}
 
 {% if entry.abstract %}
-<button class="btn btn-warning btm-sm"  onclick="toggleAbstract{{entry.key}}()">ABSTRACT</button>
+<button class="btn btn-warning btm-sm" onclick="toggleReferenceSection('{{ abstract_target }}')">ABSTRACT</button>
 {% endif %}
 
 {% if entry.abstract %}
-<div id="a{{entry.key}}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<div id="{{ bib_target }}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
 <pre>{{ entry.bibtex | remove: "entry.abstract" }}</pre>
 </div>
 {% else %}
-<div id="a{{entry.key}}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<div id="{{ bib_target }}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
 <pre>{{ entry.bibtex }}</pre>
 </div>
 {% endif %}
 
-<div id="b{{entry.key}}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
+<div id="{{ abstract_target }}" style="display: none; background-color:black; border-radius:5px; padding:10px; margin-bottom:20px;">
 <pre>{{entry.abstract}}</pre>
 </div>
 
 <script>
-function toggleBibtex{{entry.key}}(parameter) {
-    var x= document.getElementById('a{{entry.key}}');
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
-    }
-}
-function toggleAbstract{{entry.key}}(parameter) {
-    var x= document.getElementById('b{{entry.key}}');
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
-    }
+if (typeof window.toggleReferenceSection === 'undefined') {
+  window.toggleReferenceSection = function(id) {
+    var section = document.getElementById(id);
+    if (!section) { return; }
+    var isHidden = section.style.display === 'none' || section.style.display === '';
+    section.style.display = isHidden ? 'block' : 'none';
+  };
 }
 </script>
