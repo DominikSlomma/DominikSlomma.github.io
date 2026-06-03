@@ -5,7 +5,7 @@
     {% assign photo_webp = member.photo_webp %}
     {% assign photo_width = member.photo_width | default: 600 %}
     {% assign photo_height = member.photo_height | default: 600 %}
-    <a href="{{site.url}}{{site.baseurl}}/">
+    <a href="{{ '/' | relative_url }}">
       <picture class="sidebar-photo">
         {% if photo_webp %}
         <source srcset="{{ '/images/' | append: photo_webp | relative_url }}" type="image/webp">
@@ -20,8 +20,9 @@
       {% if member.scholar %}<a href="{{ member.scholar }}" target="_blank" rel="me noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar-square ai-2x"></i></a>{% endif %}
       {% if member.orcid %}<a href="{{ member.orcid }}" target="_blank" rel="me noopener" aria-label="ORCID"><i class="ai ai-orcid-square ai-2x"></i></a>{% endif %}
       {% if member.github %}<a href="{{ member.github }}" target="_blank" rel="me noopener" aria-label="GitHub"><i class="fa fa-github-square fa-2x"></i></a>{% endif %}
-      {% if member.researchgate %}<a href="{{ member.researchgate }}" target="_blank" rel="noopener" aria-label="ResearchGate"><i class="ai ai-researchgate-square ai-2x"></i></a>{% endif %}
-      {% if member.cv %}<a href="{{ site.url }}{{ site.baseurl }}/{{ member.cv }}" target="_blank" rel="noopener" aria-label="Curriculum Vitae"><i class="ai ai-cv-square ai-2x"></i></a>{% endif %}
+      {% if member.ieee %}<a href="{{ member.ieee }}" target="_blank" rel="noopener" aria-label="IEEE author profile"><i class="fa fa-university fa-2x"></i></a>{% endif %}
+      {% if member.researchgate %}<a href="{{ member.researchgate }}" target="_blank" rel="me noopener" aria-label="ResearchGate"><i class="ai ai-researchgate-square ai-2x"></i></a>{% endif %}
+      {% if member.cv %}<a href="{{ '/' | append: member.cv | relative_url }}" target="_blank" rel="noopener" aria-label="Curriculum Vitae"><i class="ai ai-cv-square ai-2x"></i></a>{% endif %}
     </div>
     <ul class="sidebar-education">
       {% for education in member.educationshort %}
@@ -29,7 +30,7 @@
       {% endfor %}
     </ul>
     {% if member.cv %}
-    <a class="btn btn-primary btn-sm sidebar-download" href="{{ site.url }}{{ site.baseurl }}/{{ member.cv }}" target="_blank" rel="noopener">
+    <a class="btn btn-primary btn-sm sidebar-download" href="{{ '/' | append: member.cv | relative_url }}" target="_blank" rel="noopener">
       Download CV
     </a>
     {% endif %}
@@ -39,10 +40,11 @@
   <div class="jumbotron">
     <h5>Research Focus</h5>
     <ul class="sidebar-list">
-      <li>Visual SLAM for surgical robotics</li>
-      <li>Sensing and autonomy for emergency response</li>
+      <li>Deformable 3D reconstruction for surgical robotics</li>
+      <li>Visual SLAM and 360-degree perception</li>
+      <li>UAV-based situational awareness</li>
       <li>Real-time GPU/CPU systems</li>
-      <li>Perception-driven human-robot teaming</li>
+      <li>Deployment-ready robotic systems</li>
     </ul>
   </div>
 

@@ -10,16 +10,17 @@
   email: dominik.slomma@student.uts.edu.au
   github: https://github.com/DominikSlomma
   orcid: https://orcid.org/0000-0002-1825-0097
-  researchgate: https://ieeexplore.ieee.org/author/37088806657
+  ieee: https://ieeexplore.ieee.org/author/37088806657
   scholar: https://scholar.google.com/citations?user=Qz_h7NsAAAAJ&hl=de
   cv: cv/cv.pdf
-  # Change the items in "education" you have (up to 6)
   education:
     [
-      "(2017) B.S. Westphalian University",
-      "(2022) M.S. Westphalian University",
+      "(2023–present) PhD in Engineering, UTS",
+      "(2022) M.Sc., Westphalian University of Applied Sciences",
+      "(2017) B.Sc., Westphalian University of Applied Sciences",
     ]
 
   educationshort:
-    ["(2017) B.S. Westphalian University",
-      "(2022) M.S. Westphalian University"]
+    ["(2023–present) PhD in Engineering, UTS",
+      "(2022) M.Sc., Westphalian University of Applied Sciences",
+      "(2017) B.Sc., Westphalian University of Applied Sciences"]

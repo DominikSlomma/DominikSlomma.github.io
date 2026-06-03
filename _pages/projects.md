@@ -13,13 +13,13 @@ image: /images/profilPic-800.jpg
   <h3>Efficient Template-based Reconstruction of Deformable Surfaces</h3>
   <p>Accelerates deformable-scene reconstruction for surgical robotics by tracking mesh vertices directly in image space, cutting optimisation cost without sacrificing accuracy.</p>
   <ul class="project-tags">
-    <li>Deformable SLAM</li>
     <li>Surgical robotics</li>
-    <li>GPU optimisation</li>
+    <li>Deformable reconstruction</li>
+    <li>Optimisation</li>
   </ul>
   <div class="project-links">
     <a class="btn btn-outline-primary btn-sm" href="https://github.com/DominikSlomma/Efficient-and-Accurate-Template-based-Reconstruction-of-Deformable-Surfaces" target="_blank" rel="noopener">Source code</a>
-    <a class="btn btn-outline-secondary btn-sm" href="{{ site.url }}{{ site.baseurl }}/publications/" rel="noopener">Publication</a>
+    <a class="btn btn-outline-secondary btn-sm" href="{{ '/publications/' | relative_url }}">Publication</a>
   </div>
 </article>
 
@@ -32,8 +32,8 @@ image: /images/profilPic-800.jpg
     <li>Benchmarking</li>
   </ul>
   <div class="project-links">
-    <a class="btn btn-outline-primary btn-sm" href="https://github.com/DominikSlomma" target="_blank" rel="noopener">Code coming soon</a>
-    <a class="btn btn-outline-secondary btn-sm" href="mailto:dominik.slomma@student.uts.edu.au" rel="noopener">Collaborate</a>
+    <a class="btn btn-outline-primary btn-sm" href="{{ '/publications/' | relative_url }}">Related publications</a>
+    <a class="btn btn-outline-secondary btn-sm" href="mailto:dominik.slomma@student.uts.edu.au">Discuss collaboration</a>
   </div>
 </article>
 

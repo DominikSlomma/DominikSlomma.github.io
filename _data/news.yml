@@ -1,14 +1,47 @@
-- date: 2024-08-15
-  title: Website refresh highlights surgical robotics research
-  summary: Launched the updated personal site with a streamlined publications list, richer news feed, and easier access to current projects in visual SLAM for surgery.
-  link: /
+- date: 2024-12-01
+  display_date: December 2024
+  title: Efficient and Accurate Template-based Reconstruction of Deformable Surfaces
+  summary: Published at ICARCV 2024.
+  link: https://doi.org/10.1109/ICARCV63323.2024.10821695
+
+- date: 2024-03-01
+  display_date: 2024
+  title: Lessons from robot-assisted disaster response deployments
+  summary: Journal of Field Robotics article on DRZ task-force deployments and lessons learned.
+  link: https://doi.org/10.1002/rob.22275
+
+- date: 2023-09-01
+  display_date: September 2023
+  title: UAVs and Neural Networks for Search and Rescue Missions
+  summary: Published at ISR Europe 2023.
+  link: https://arxiv.org/abs/2310.05512
+
+- date: 2022-11-01
+  display_date: November 2022
+  title: PatchMatch-Stereo-Panorama
+  summary: Published at SSRR 2022; fast dense reconstruction from 360-degree video images.
+  link: https://doi.org/10.1109/SSRR56537.2022.10018698
+
+- date: 2022-02-01
+  display_date: February 2022
+  title: Deployment of Aerial Robots During the Flood Disaster in Erftstadt / Blessem
+  summary: Published at ICARA 2022.
+  link: https://doi.org/10.1109/ICARA55094.2022.9738529
+
+- date: 2021-10-02
+  display_date: October 2021
+  title: "German Rescue Robotics Center (DRZ): A Holistic Approach"
+  summary: Published at SSRR 2021; overview of robotic systems assisting emergency response.
+  link: https://doi.org/10.1109/SSRR53300.2021.9597869
 
 - date: 2021-10-01
-  title: Deployment of aerial robots reported at SSRR 2021
-  summary: Presented our Berlin industrial-fire mission report at the IEEE Safety, Security, and Rescue Robotics Symposium, showcasing UAV-supported emergency response workflows.
+  display_date: October 2021
+  title: Deployment of Aerial Robots after a Major Industrial Fire
+  summary: Published at SSRR 2021; field report on UAV-supported reconnaissance.
   link: https://doi.org/10.1109/SSRR53300.2021.9597677
 
-- date: 2021-02-15
-  title: Search-and-rescue UAV architecture featured at ICARA
-  summary: Shared the modular UAV platform for indoor search-and-rescue missions at ICARA 2021, emphasizing guided autonomy to reduce operator workload.
+- date: 2021-02-01
+  display_date: February 2021
+  title: Small Commercial UAVs for Indoor Search and Rescue Missions
+  summary: Published at ICARA 2021.
   link: https://doi.org/10.1109/ICARA51699.2021.9376551

@@ -76,6 +76,9 @@
     {%- if profile.github -%}
       {%- unless first_link -%}, {% endunless -%}"{{ profile.github }}"{%- assign first_link = false -%}
     {%- endif -%}
+    {%- if profile.ieee -%}
+      {%- unless first_link -%}, {% endunless -%}"{{ profile.ieee }}"{%- assign first_link = false -%}
+    {%- endif -%}
     {%- if profile.researchgate -%}
       {%- unless first_link -%}, {% endunless -%}"{{ profile.researchgate }}"{%- assign first_link = false -%}
     {%- endif -%}

@@ -32,15 +32,37 @@
 
 <div class="publication-actions" markdown="0">
   {% if bibtest %}
-  <a class="btn btn-success btn-sm" href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank" rel="noopener">PDF</a>
+  <a class="btn btn-success btn-sm" href="{{ '/papers/' | append: entry.file | relative_url }}" target="_blank" rel="noopener">PDF</a>
   {% endif %}
 
-  {% if entry.doi %}
-    {% if entry.type == 'unpublished' %}
-      <a class="btn btn-primary btn-sm" href="{{ entry.doi | prepend: 'https://arxiv.org/abs/' }}" target="_blank" rel="noopener">ARXIV</a>
-    {% else %}
-      <a class="btn btn-primary btn-sm" href="{{ entry.doi | prepend: 'http://doi.org/' }}" target="_blank" rel="noopener">DOI</a>
-    {% endif %}
+  {% assign doi_value = entry.doi | default: '' | strip %}
+  {% assign doi_lower = doi_value | downcase %}
+  {% assign arxiv_id = entry.eprint | default: '' | strip %}
+  {% assign archive_prefix = entry.archiveprefix | default: '' | downcase %}
+
+  {% if arxiv_id != '' and archive_prefix == 'arxiv' %}
+    <a class="btn btn-primary btn-sm" href="{{ arxiv_id | prepend: 'https://arxiv.org/abs/' }}" target="_blank" rel="noopener">ARXIV</a>
+  {% elsif doi_lower contains 'arxiv.org/abs/' %}
+    <a class="btn btn-primary btn-sm" href="{{ doi_value }}" target="_blank" rel="noopener">ARXIV</a>
+  {% endif %}
+
+  {% if doi_value != '' %}
+    {% unless doi_lower contains 'arxiv.org' %}
+      {% if doi_lower contains 'doi.org/' %}
+        {% assign doi_href = doi_value %}
+      {% else %}
+        {% assign doi_href = doi_value | prepend: 'https://doi.org/' %}
+      {% endif %}
+      <a class="btn btn-success btn-sm" href="{{ doi_href }}" target="_blank" rel="noopener">DOI</a>
+    {% endunless %}
+  {% endif %}
+
+  {% if entry.url %}
+    {% assign entry_url = entry.url | strip %}
+    {% assign entry_url_lower = entry_url | downcase %}
+    {% unless entry_url_lower contains 'doi.org/' or entry_url_lower contains 'arxiv.org/abs/' %}
+      <a class="btn btn-secondary btn-sm" href="{{ entry_url }}" target="_blank" rel="noopener">URL</a>
+    {% endunless %}
   {% endif %}
 
   {% if entry.type == 'unpublished' or entry.type == 'article' or  entry.type == 'thesis' or entry.type == 'inproceedings' or entry.type == 'report' %}

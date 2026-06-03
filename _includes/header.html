@@ -1,11 +1,13 @@
+{% if site.google_tag_manager %}
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+{% endif %}
 
 <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
-  <a class="navbar-brand" href="{{ site.url }}{{ site.baseurl }}/">
-    <img src="{{ site.url }}{{ site.baseurl }}/images/robot-icon.svg" width="30" height="30" style="margin-right:8px" class="d-inline-block align-top" alt="Robotics logo">
+  <a class="navbar-brand" href="{{ '/' | relative_url }}">
+    <img src="{{ '/images/robot-icon.svg' | relative_url }}" width="30" height="30" style="margin-right:8px" class="d-inline-block align-top" alt="Robotics logo">
     {{ site.title | escape }}
   </a>
   <button class="toggler navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,9 +16,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="collapse navbar-collapse justify-content-center" id="navbarColor02">
     <div class="navbar-nav">
-      <a class="nav-item nav-link" href="{{ site.url }}{{ site.baseurl }}/">Home</a>
+      <a class="nav-item nav-link" href="{{ '/' | relative_url }}">Home</a>
       {% for page in site.nav_pages %}       
-        <a class="nav-item nav-link" href="{{ site.url }}{{ site.baseurl }}/{{page.name}}">{{page.name | capitalize }}</a>
+        <a class="nav-item nav-link" href="{{ '/' | append: page.name | relative_url }}">{{page.name | capitalize }}</a>
       {% endfor %}
     </div>
   </div>

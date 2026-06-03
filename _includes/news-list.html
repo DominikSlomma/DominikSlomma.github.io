@@ -10,9 +10,18 @@
   {% endif %}
   {% for item in items %}
     <article class="news-card">
-      <p class="news-card__date">{{ item.date | date: "%B %e, %Y" }}</p>
+      {% if item.display_date %}
+        <p class="news-card__date">{{ item.display_date }}</p>
+      {% else %}
+        <p class="news-card__date">{{ item.date | date: "%B %e, %Y" }}</p>
+      {% endif %}
       {% if item.link %}
-        <h3 class="news-card__title"><a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.title }}</a></h3>
+        {% assign item_link = item.link %}
+        {% if item_link contains '://' %}
+          <h3 class="news-card__title"><a href="{{ item_link }}" target="_blank" rel="noopener">{{ item.title }}</a></h3>
+        {% else %}
+          <h3 class="news-card__title"><a href="{{ item_link | relative_url }}">{{ item.title }}</a></h3>
+        {% endif %}
       {% else %}
         <h3 class="news-card__title">{{ item.title }}</h3>
       {% endif %}
@@ -25,6 +34,6 @@
 
 {% if include.show_read_more %}
   <div class="news-list__footer" markdown="0">
-    <a class="btn btn-outline-primary btn-sm" href="{{ site.url }}{{ site.baseurl }}/news/">View all news</a>
+    <a class="btn btn-outline-primary btn-sm" href="{{ '/news/' | relative_url }}">View all news</a>
   </div>
 {% endif %}
