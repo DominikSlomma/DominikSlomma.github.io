@@ -5,6 +5,9 @@ permalink: /teaching/
 sitemap: true
 description: "Dominik Slomma's teaching experience includes UTS tutoring, W-HS thesis supervision, DRZ internship mentoring, and UAV field training."
 image: /images/profilPic-800.jpg
+last_modified_at: 2026-06-03
+changefreq: monthly
+priority: 0.7
 ---
 # Teaching Experience
 

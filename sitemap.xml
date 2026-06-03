@@ -5,20 +5,36 @@ sitemap: false
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% assign pages = site.pages | where_exp:'page','page.sitemap != false' %}
-  {% assign posts = site.posts | where_exp:'post','post.sitemap != false' %}
-  {% for page in pages %}
-    {% if page.url %}
-      <url>
-        <loc>{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}</loc>
-        <lastmod>{{ page.last_modified_at | default: page.date | default: site.time | date_to_xmlschema }}</lastmod>
-      </url>
-    {% endif %}
-  {% endfor %}
-  {% for post in posts %}
-    <url>
-      <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
-      <lastmod>{{ post.last_modified_at | default: post.date | default: site.time | date_to_xmlschema }}</lastmod>
-    </url>
-  {% endfor %}
+{%- assign pages = site.pages | where_exp:'page','page.sitemap != false' -%}
+{%- assign posts = site.posts | where_exp:'post','post.sitemap != false' -%}
+{%- assign sorted_pages = pages | sort: 'url' -%}
+{%- for page in sorted_pages -%}
+{%- if page.url -%}
+{%- assign clean_url = page.url | replace:'index.html','' -%}
+{%- assign lastmod = page.last_modified_at | default: page.date -%}
+  <url>
+    <loc>{{ clean_url | absolute_url | xml_escape }}</loc>
+{%- if lastmod %}
+    <lastmod>{{ lastmod | date_to_xmlschema }}</lastmod>
+{%- endif -%}
+{%- if page.changefreq %}
+    <changefreq>{{ page.changefreq }}</changefreq>
+{%- endif -%}
+{%- if page.priority %}
+    <priority>{{ page.priority }}</priority>
+{%- endif %}
+  </url>
+{%- endif -%}
+{%- endfor -%}
+{%- for post in posts -%}
+{%- assign lastmod = post.last_modified_at | default: post.date -%}
+  <url>
+    <loc>{{ post.url | absolute_url | xml_escape }}</loc>
+{%- if lastmod %}
+    <lastmod>{{ lastmod | date_to_xmlschema }}</lastmod>
+{%- endif %}
+    <changefreq>{{ post.changefreq | default: 'yearly' }}</changefreq>
+    <priority>{{ post.priority | default: 0.5 }}</priority>
+  </url>
+{%- endfor %}
 </urlset>

@@ -9,10 +9,10 @@
   info: PhD Student at University of Technology Sydney (UTS)
   email: dominik.slomma@student.uts.edu.au
   github: https://github.com/DominikSlomma
-  orcid: https://orcid.org/0000-0002-1825-0097
+  # orcid:
   ieee: https://ieeexplore.ieee.org/author/37088806657
   scholar: https://scholar.google.com/citations?user=Qz_h7NsAAAAJ&hl=de
-  cv: cv/cv.pdf
+  # cv:
   education:
     [
       "(2023–present) PhD in Engineering, UTS",

@@ -6,6 +6,9 @@ years: [2016, 2017, 2018, 2019, 2020, 2021]
 math: true
 description: "Peer-reviewed publications, conference papers, and journal articles authored by Dominik Slomma on visual SLAM, surgical robotics, and rescue robotics."
 image: /images/profilPic-800.jpg
+last_modified_at: 2026-06-03
+changefreq: weekly
+priority: 0.9
 ---
 
 # Publications

@@ -5,6 +5,9 @@ permalink: /projects/
 sitemap: true
 description: "Explore Dominik Slomma's research projects spanning surgical robotics, deformable surface reconstruction, and emergency response perception systems."
 image: /images/profilPic-800.jpg
+last_modified_at: 2026-06-03
+changefreq: monthly
+priority: 0.8
 ---
 # Research Projects
 
