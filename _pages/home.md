@@ -7,18 +7,24 @@ image: /images/profilPic-800.jpg
 ---
 # Dominik Slomma
 ## PhD Student, Robotics Institute, Computer Scientist
-<p style="font-size: 20px; text-align: center;">  Designing robots that observe and understand their surroundings  </p>
+<p class="home-tagline">Designing robots that observe and understand their surroundings</p>
 
-<p style="text-align: justify;">
+<p>
 My name is Dominik Slomma and I am currently pursuing a PhD in Robotics at the University of Technology Sydney. My research focuses on deformable 3D reconstruction and visual SLAM for surgical robotics, especially in settings where robots need to understand changing, non-rigid environments in real time.
 </p>
-<p style="text-align: justify;">
-Before starting my PhD, I worked with the <a href="https://www.en.w-hs.de/about-us/the-university/" target="_blank" rel="noopener">Westphalian University of Applied Sciences</a> and the <a href="https://rettungsrobotik.de/" target="_blank" rel="noopener">German Rescue Robotics Center (DRZ)</a>, a research initiative and competence centre for rescue robotics in Dortmund. The DRZ environment brought together emergency-service users, industry partners, universities, and research institutes, which gave my work a strong applied and collaborative setting. I helped move research prototypes into a robotics command vehicle, so UAV-based mapping, 360-degree perception, live data links, and situation-awareness tools could be tested in exercises and realistic scenarios with fire brigades and other emergency services. This work also led to real deployments, where I supported emergency responders with aerial imagery, mapping, and 3D scene information.
+<p>
+Before starting my PhD, I worked with the <a href="https://www.en.w-hs.de/about-us/the-university/" target="_blank" rel="noopener">Westphalian University of Applied Sciences</a> and the <a href="https://rettungsrobotik.de/" target="_blank" rel="noopener">German Rescue Robotics Center (DRZ)</a>, a research initiative and competence centre for rescue robotics in Dortmund. The DRZ environment brought together emergency-service users, industry partners, universities, and research institutes, which gave my work a strong applied and collaborative setting.
 </p>
-<p style="text-align: justify;">
-I also bring an engineering background in embedded systems from my earlier work as a project engineer at Gesellschaft für Verbrennungsmotoren und Hybridantriebe in Dortmund. There, I developed and tested control units for different application areas, with a strong focus on real-time capable hardware and software testing for automotive exhaust aftertreatment systems. This included automated ECU tests, UDP and KWP communication analysis, prototype control units, and hardware-in-the-loop environments for automotive validation.
+<p>
+I helped move research prototypes into a robotics command vehicle, so UAV-based mapping, 360-degree perception, live data links, and situation-awareness tools could be tested in exercises and realistic scenarios with fire brigades and other emergency services. This work also led to real deployments, where I supported emergency responders with aerial imagery, mapping, and 3D scene information.
 </p>
-<p style="text-align: justify;">
+<p>
+I also bring an engineering background in embedded systems from my earlier work as a project engineer at Gesellschaft für Verbrennungsmotoren und Hybridantriebe in Dortmund. There, I developed and tested control units for different application areas, with a strong focus on real-time capable hardware and software testing for automotive exhaust aftertreatment systems.
+</p>
+<p>
+This included automated ECU tests, UDP and KWP communication analysis, prototype control units, and hardware-in-the-loop environments for automotive validation.
+</p>
+<p>
 These two paths shape how I approach robotics research. I care about perception and reconstruction methods that are scientifically sound, but also practical to integrate, computationally efficient, real-time capable, and useful for people working with robots under demanding conditions.
 </p>
 

@@ -35,6 +35,19 @@
   <meta name="twitter:description" content="{{ meta_description }}">
   <meta name="twitter:image" content="{{ meta_image }}">
 
+  <script>
+    (function () {
+      try {
+        var storedTheme = window.localStorage.getItem('site-theme');
+        if (storedTheme === 'light' || storedTheme === 'dark') {
+          document.documentElement.setAttribute('data-theme', storedTheme);
+        }
+      } catch (error) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    }());
+  </script>
+
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <link rel="canonical" href="{{ canonical_url }}">
   <link rel="shortcut icon" type ="image/x-icon" href="{{ site.url }}{{ site.baseurl }}/favicon.ico">
